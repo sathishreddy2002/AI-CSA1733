@@ -1,0 +1,16 @@
+% Define diet suggestions for different diseases
+diet_suggestion(high_blood_pressure, 'Low-sodium diet with plenty of fruits, vegetables, and whole grains. Limit saturated fats and avoid trans fats.').
+diet_suggestion(diabetes, 'Low-carbohydrate diet with focus on lean proteins, non-starchy vegetables, and healthy fats. Monitor carbohydrate intake and limit sugary foods.').
+diet_suggestion(high_cholesterol, 'Low-cholesterol diet with emphasis on whole grains, fruits, vegetables, and lean proteins. Limit saturated and trans fats.').
+diet_suggestion(heart_disease, 'Heart-healthy diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats. Limit sodium, saturated fats, and added sugars.').
+diet_suggestion(obesity, 'Calorie-controlled diet with emphasis on whole foods, fruits, vegetables, lean proteins, and healthy fats. Limit processed foods and sugary drinks.').
+diet_suggestion(gastritis, 'Low-acid diet with emphasis on non-acidic foods such as lean proteins, non-citrus fruits, vegetables, and whole grains. Avoid spicy and acidic foods.').
+diet_suggestion(ibs, 'Low-FODMAP diet with focus on easily digestible foods such as lean proteins, low-FODMAP fruits and vegetables, and gluten-free grains. Avoid high-FODMAP foods like certain fruits, vegetables, dairy, and grains.').
+
+% Define predicate to suggest diet based on disease
+suggest_diet(Disease, Diet) :-
+    diet_suggestion(Disease, Diet),
+    write('For '), write(Disease), write(', '), write(Diet), nl.
+
+% Example query:
+% ?- suggest_diet(high_blood_pressure, Diet).
